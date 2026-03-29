@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHOWMIKA - Pure Taste from Nature's Roots</title>
+    <style>
+        /* ========================================
+           BHOWMIKA - FULLY RESPONSIVE DESIGN
+           ======================================== */
+
+        /* Root Variables */
+        :root {
+            --primary-green: #047857;
+            --dark-green: #065f46;
+            --darker-green: #1f5e23;
+            --light-green: #10b981;
+            --green-50: #f0fdf4;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-700: #374151;
+            --white: #ffffff;
+        }
+
+        /* Reset & Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-700);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            letter-spacing: 0.05em;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 0.25rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+        /* ========== BANNER ========== */
+        .banner-section {
+            width: 100%;
+            background-color: var(--gray-100);
+            padding: 1.5rem;
+            min-height: 400px;
+        }
+
+        .banner-container {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .banner-wrapper {
+            background-color: var(--white);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            height: 500px;
+        }
+
+        .banner-content {
+            width: 50%;
+            background: linear-gradient(135deg, #1f5e23 0%, #047857 100%);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-content::after {
+            content: '🍃';
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+            font-size: 10rem;
+            opacity: 0.1;
+        }
+
+        .banner-badge {
+            width: 5rem;
+            height: 5rem;
+            border: 3px solid var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .banner-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            max-width: 20rem;
+        }
+
+        .banner-subtitle {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.95;
+        }
+
+        .banner-image {
+            width: 50%;
+            background-color: var(--white);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-image-box {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5deb3 0%, #d2b48c 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #8b7355;
+        }
+
+        .banner-dots {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 3rem;
+            display: flex;
+            gap: 0.75rem;
+            z-index: 10;
+        }
+
+        .banner-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .banner-dot.active {
+            background-color: var(--white);
+            width: 2rem;
+        }
+
+        /* ========== PRODUCT CATEGORY ========== */
+        .category-section {
+            width: 100%;
+            background-color: var(--gray-100);
+            padding: 3rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
+        }
+
+        .category-grid {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-item {
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: 1.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+        }
+
+        .category-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .pagination-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #d1d5db;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-dot.active {
+            background-color: var(--darker-green);
+            width: 1.5rem;
+        }
+
+        /* ========== OUR PRODUCTS ========== */
+        .products-section {
+            width: 100%;
+            background-color: var(--white);
+            padding: 3rem 1.5rem;
+        }
+
+        .products-header {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .products-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-green);
+        }
+
+        .view-more-btn {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more-btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        .products-grid {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--dark-green);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .product-info {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-meta {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .whatsapp-btn {
+            background-color: #10b981;
+            color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #059669;
+        }
+
+        /* ========== FEATURED ========== */
+        .featured-section {
+            width: 100%;
+            background-color: var(--dark-green);
+            padding: 3rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-section::after {
+            content: '🍃';
+            position: absolute;
+            top: -2rem;
+            right: 0;
+            font-size: 20rem;
+            opacity: 0.05;
+            text-indent: -9999px;
+        }
+
+        .featured-container {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .featured-content {
+            color: var(--white);
+        }
+
+        .featured-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .featured-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .featured-btn {
+            background-color: var(--white);
+            color: var(--dark-green);
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-btn:hover {
+            background-color: var(--gray-100);
+        }
+
+        .featured-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--white);
+        }
+
+        /* ========== FEATURES ========== */
+        .features-section {
+            width: 100%;
+            background-color: var(--dark-green);
+            padding: 2rem 1.5rem;
+        }
+
+        .features-grid {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-title {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: #0a3d2a;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 1.5rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+
+        /* Mobile (320px - 640px) */
+        @media (max-width: 640px) {
+            header {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            nav {
+                display: none;
+                gap: 1rem;
+            }
+
+            nav.mobile-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            /* Banner */
+            .banner-section {
+                padding: 1rem;
+                min-height: auto;
+            }
+
+            .banner-wrapper {
+                flex-direction: column;
+                height: auto;
+                gap: 1rem;
+            }
+
+            .banner-content {
+                width: 100%;
+                padding: 2rem 1.5rem;
+                min-height: 250px;
+            }
+
+            .banner-content::after {
+                font-size: 5rem;
+                opacity: 0.03;
+            }
+
+            .banner-badge {
+                width: 3.5rem;
+                height: 3.5rem;
+                border-width: 2px;
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            .banner-title {
+                font-size: 1.5rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .banner-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .banner-image {
+                width: 100%;
+                padding: 1.5rem;
+                aspect-ratio: 1;
+            }
+
+            .banner-image-box {
+                font-size: 3rem;
+            }
+
+            .banner-dots {
+                left: 1.5rem;
+                bottom: 1rem;
+            }
+
+            /* Category */
+            .category-section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .category-item {
+                padding: 1rem 0.75rem;
+            }
+
+            .category-icon {
+                font-size: 2rem;
+            }
+
+            .category-name {
+                font-size: 0.75rem;
+            }
+
+            /* Products */
+            .products-section {
+                padding: 2rem 1rem;
+            }
+
+            .products-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .products-title {
+                font-size: 1.5rem;
+                width: 100%;
+            }
+
+            .view-more-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                flex-direction: row;
+            }
+
+            .product-image {
+                width: 40%;
+                aspect-ratio: 1;
+            }
+
+            .product-info {
+                width: 60%;
+                padding: 0.75rem;
+            }
+
+            /* Featured */
+            .featured-section {
+                padding: 2rem 1rem;
+            }
+
+            .featured-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .featured-description {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .featured-image {
+                aspect-ratio: 1;
+                min-height: 200px;
+                font-size: 3rem;
+            }
+
+            /* Features */
+            .features-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .feature-item {
+                padding: 1rem 0.75rem;
+            }
+
+            .feature-icon {
+                font-size: 1.75rem;
+            }
+
+            .feature-title {
+                font-size: 0.7rem;
+            }
+
+            .feature-description {
+                font-size: 0.65rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 2rem 1rem 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Tablet (641px - 1024px) */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .banner-wrapper {
+                flex-direction: row;
+                height: 350px;
+            }
+
+            .banner-content {
+                width: 55%;
+                padding: 2rem 2rem;
+            }
+
+            .banner-image {
+                width: 45%;
+                display: flex;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop (1025px+) */
+        @media (min-width: 1025px) {
+            .banner-wrapper {
+                flex-direction: row;
+                height: 500px;
+            }
+
+            .banner-content {
+                width: 50%;
+                padding: 3rem 3.5rem;
+            }
+
+            .banner-image {
+                width: 50%;
+                display: flex;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .featured-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">BHOWMIKA</div>
+        <nav id="nav-menu">
+            <a href="#" class="active">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">PRODUCT</a>
+            <a href="#">GALLERY</a>
+            <a href="#">CONTACT US</a>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-wrapper">
+                <div class="banner-content">
+                    <div class="banner-badge">0</div>
+                    <h1 class="banner-title">PURE TASTE FROM NATURE'S ROOTS</h1>
+                    <p class="banner-subtitle">INNOVATING TO MAKE COOKING BETTER</p>
+                    <div class="banner-dots">
+                        <button class="banner-dot active"></button>
+                        <button class="banner-dot"></button>
+                        <button class="banner-dot"></button>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <div class="banner-image-box">🥄</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Category Section -->
+    <section class="category-section">
+        <div class="section-title">PRODUCT CATEGORY</div>
+        <div class="category-grid">
+            <div class="category-item">
+                <div class="category-icon">🌶️</div>
+                <div class="category-name">Chilly Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">🟤</div>
+                <div class="category-name">Coriander Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">☕</div>
+                <div class="category-name">Coffee Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">🥄</div>
+                <div class="category-name">Turmeric Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">🌶️</div>
+                <div class="category-name">Chilly Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">🟤</div>
+                <div class="category-name">Coriander Powder</div>
+            </div>
+            <div class="category-item">
+                <div class="category-icon">☕</div>
+                <div class="category-name">Coffee Powder</div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination-dot active"></button>
+            <button class="pagination-dot"></button>
+            <button class="pagination-dot"></button>
+        </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section class="products-section">
+        <div class="products-header">
+            <h2 class="products-title">OUR PRODUCTS</h2>
+            <button class="view-more-btn">View More →</button>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">☕</div>
+                <div class="product-info">
+                    <div class="product-meta">BHOWMIKA SPICES - 250gm</div>
+                    <div class="product-name">Coffee Powder</div>
+                    <div class="product-description">Premium organic coffee powder sourced from the lush hills of Wayanad for rich, authentic aroma.</div>
+                    <button class="whatsapp-btn">💬 WhatsApp</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🌶️</div>
+                <div class="product-info">
+                    <div class="product-meta">BHOWMIKA SPICES - 100gm</div>
+                    <div class="product-name">Chilly Powder</div>
+                    <div class="product-description">Fiery, bold and aromatic red chilly powder made from premium sun-dried chilies for rich color and bold.</div>
+                    <button class="whatsapp-btn">💬 WhatsApp</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🥄</div>
+                <div class="product-info">
+                    <div class="product-meta">BHOWMIKA SPICES - 250gm</div>
+                    <div class="product-name">Turmeric Powder</div>
+                    <div class="product-description">Pure, golden turmeric powder with rich color, earthy aroma, and natural goodness – Fresh and authentic.</div>
+                    <button class="whatsapp-btn">💬 WhatsApp</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🟤</div>
+                <div class="product-info">
+                    <div class="product-meta">BHOWMIKA SPICES - 100gm</div>
+                    <div class="product-name">Coriander Powder</div>
+                    <div class="product-description">Fresh, aromatic coriander powder made from premium sun-dried coriander seeds for rich flavor and aroma.</div>
+                    <button class="whatsapp-btn">💬 WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="featured-container">
+            <div class="featured-content">
+                <h2 class="featured-title">BHOWMIKA SPICES – MASTERS OF AUTHENTIC WAYANAD COFFEE POWDER</h2>
+                <p class="featured-description">Finely crafted coffee powder made from handpicked Wayanad beans, offering rich aroma, deep flavor, and a truly fresh, authentic experience.</p>
+                <button class="featured-btn">View More →</button>
+            </div>
+            <div class="featured-image">☕</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚚</div>
+                <div class="feature-title">FREE DELIVERY</div>
+                <div class="feature-description">On orders above Rs 2000</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">7 DAYS RETURN</div>
+                <div class="feature-description">100% hassle free return</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">SECURE PAYMENT</div>
+                <div class="feature-description">100% secure & encrypt</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">CUSTOMER CARE</div>
+                <div class="feature-description">Dedicated support team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BHOWMIKA</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">in</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li>📍 Location: Pulpally, Wayanad</li>
+                    <li>📧 Email: contact@bhowmika.com</li>
+                    <li>📱 Phone: +91 98765 43210</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BHOWMIKA SPICES. All Rights Reserved. Powered by ACME.KY</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+        });
+
+        // Close menu when link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('mobile-active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Banner carousel
+        let currentSlide = 0;
+        const bannerDots = document.querySelectorAll('.banner-dot');
+        
+        function rotateBanner() {
+            currentSlide = (currentSlide + 1) % bannerDots.length;
+            bannerDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        setInterval(rotateBanner, 5000);
+    </script>
+</body>
+</html>

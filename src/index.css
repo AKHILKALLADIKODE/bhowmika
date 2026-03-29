@@ -1,0 +1,95 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.container-fluid {
+  @apply w-full px-4 md:px-6 lg:px-8;
+}
+
+.cmpad {
+  @apply py-8 md:py-12 lg:py-16;
+}
+
+.navbar-brand {
+  @apply flex items-center no-underline;
+}
+
+.nav-link {
+  @apply text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium;
+}
+
+.sub-banner {
+  @apply relative py-16 text-center;
+}
+
+.banner-title {
+  @apply text-4xl md:text-5xl font-bold font-cinzel text-gray-800;
+}
+
+.banner-subtitle {
+  @apply text-xl md:text-2xl text-gray-600 mt-2;
+}
+
+.section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.product-card,
+.service-card,
+.gallery-item {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300;
+}
+
+.contact-form {
+  @apply space-y-4;
+}
+
+.form-group {
+  @apply flex flex-col;
+}
+
+.form-label {
+  @apply block text-gray-700 font-bold mb-2;
+}
+
+.form-control {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200;
+}
+
+.footer-nav {
+  @apply flex gap-6 flex-wrap;
+}
+
+.footer-nav a {
+  @apply text-gray-600 hover:text-blue-600 transition-colors duration-300;
+}
+
+.contact-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.contact-item {
+  @apply bg-gray-50 p-6 rounded-lg;
+}
+
+.contact-item i {
+  @apply text-blue-600 text-2xl mb-3;
+}
+
+.social-icon {
+  @apply inline-flex items-center justify-center w-10 h-10 bg-gray-200 hover:bg-blue-600 text-gray-700 hover:text-white rounded-full transition-colors duration-300 mx-2;
+}
+
+.gradient-line {
+  @apply h-1 bg-gradient-to-r from-blue-400 to-blue-600 my-6;
+}

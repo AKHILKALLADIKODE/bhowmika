@@ -1,0 +1,18 @@
+# BHOWMIKA Robots.txt
+# This file tells search engines which pages to crawl and index
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /assets/img/icons/file.enc
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Specify sitemap location
+Sitemap: https://bhowmika.com/sitemap.xml
+
+# Crawl delay (optional - prevents server overload)
+Crawl-Delay: 1

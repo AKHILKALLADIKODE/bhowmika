@@ -1,10 +1,11 @@
 <?php
 $DOC_ROOT = "";
-$title = "BHOWMIKA";
-$description = "";
-$keywords = "";
+$title = "BHOWMIKA - Premium Products & Services";
+$description = "Discover BHOWMIKA's premium products and services. We offer high-quality solutions tailored to your needs. Explore our range of products today.";
+$keywords = "BHOWMIKA, products, services, premium quality, shopping";
 $page = "home";
-$ogimg = "";
+$ogimg = "assets/img/logo/logo.svg";
+$canonicalUrl = "https://bhowmika.com/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
