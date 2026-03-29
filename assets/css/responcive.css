@@ -1,0 +1,76 @@
+@media only screen and (max-width: 991px) {
+    h1 {
+        font-size: 45px;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+
+    .main-heading {
+        font-size: 40px;
+    }
+
+    .banner-box {
+        padding: 30px 30px 85px 30px;
+    }
+
+    .scrollbutton a {
+        left: 30px;
+    }
+
+    .banner-box br {
+        display: none;
+    }
+
+    .cmmt {
+        margin-top: 45px;
+    }
+
+    .border-md-right {
+        border-right: 1px solid #ccc;
+    }
+
+    .delivery-policy-box {
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .main-heading {
+        font-size: 30px;
+    }
+
+    .cmmt {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-box {
+        padding: 20px 20px 80px 20px;
+    }
+
+    .scrollbutton a {
+        left: 20px;
+    }
+
+    .cmmt {
+        margin-top: 35px;
+    }
+
+    .banner-slider .swiper-slide {
+        height: 400px;
+    }
+
+    .banner-slider {
+        height: 400px;
+    }
+
+    .banner-slider .swiper-slide img {
+        height: 400px;
+    }
+}
